@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>پروژه تابستان</title>
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+	<div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="{% url 'home' %}">پروژه تابستان</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">خانه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'posts' %}">بلاگ</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">تماس</a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+
+	</div>
+
+	<div class="container">
+		{% block content %}{% endblock %}
+	</div>
+
+  <div class="container">
+    <footer class="main-footer">
+        <div>سورس پروژه در <a href="https://github.com/peymanslh/summer">گیتهاب</a></div>
+        <div>این پروژه تحت مجوز MIT منتشر شده است.</div>
+      </footer>
+  </div>
+
+	<script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

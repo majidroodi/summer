@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'shabnam';
+    src: url('../fonts/Shabnam-Light.woff') format('woff');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'shabnam';
+    src: url('../fonts/Shabnam.woff') format('woff');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'shabnam';
+    src: url('../fonts/Shabnam-Bold.woff') format('woff');
+    font-weight: 700;
+}
+
+body {
+    direction: rtl;
+    font-family: 'shabnam', Tahoma, Arial;
+}
+
+/* home-page */
+.navbar {
+    margin-top: 10px;
+}
+.home-page {
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #f8f9fa;
+    padding: 20px 10px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #666666;
+}
+.main-footer a {
+    color: #555555;
+}
+
+/* post-content */
+.post-content {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+.post-content img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto !important;
+}
+
+/* Pages */
+.page-title {
+    margin: 20px auto;
+}
+.page-content {
+    margin-top: 30px;
+}
+.page-content img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto !important;
+}
+.page-content > span {
+    display: inline-block;
+    margin: 10px auto;
+    padding-left: 10px;
+    font-size: 0.8rem;
+}
+
+/* Contact page */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+}
+.errorlist {
+    list-style: none;
+    color: #dc3545;
+    padding-right: 5px;
+    font-size: 0.8rem;
+}
+
+
+/* Pagination */
+ul.pagination {
+    padding-right: 0;
+}
+.page-item:first-child .page-link {
+    margin-left: -1;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.page-item:last-child .page-link {
+    margin-left: -1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}

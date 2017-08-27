@@ -1,0 +1,25 @@
+{% extends "summer/layout.html" %}
+
+{% block content %}
+  <section class="page-content">
+    <h2>تماس با ما</h2>
+    <div class="row">
+      <div class="col">
+        {% if success %}
+          <div class="alert alert-success">
+            پیام شما با موفقیت ارسال گردید.
+          </div>
+        {% endif %}
+
+        <form method="POST" class="contact-form">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-info">ارسال پیام</button>
+        </form>
+      </div>
+      <div class="col">
+
+      </div>
+    </div>
+  </section>
+{% endblock %}

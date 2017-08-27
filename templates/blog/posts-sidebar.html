@@ -1,0 +1,8 @@
+<div class="list-group">
+  <span class="list-group-item"><b>دسته بندی مطالب</b></span>
+  {% if categories %}
+    {% for category in categories %}
+    <a href="/blog/cat/{{ category.slug }}" class="list-group-item list-group-item-action">{{ category.name }}</a>
+    {% endfor %}
+  {% endif %}
+</div>

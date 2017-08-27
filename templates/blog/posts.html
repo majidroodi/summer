@@ -1,0 +1,48 @@
+{% extends "summer/layout.html" %}
+
+{% block content %}
+  <h1 class="page-title">صفحه ارشیو</h1>
+  <div class="row">
+    <aside class="col-md-3">
+      {% include "blog/posts-sidebar.html" %}
+    </aside>
+    <article class="col">
+      {% if posts %}
+        {% for post in posts %}
+          <div class="post-content">
+            <h3><a href="/blog/{{ post.slug }}">{{ post.name }}</a></h3>
+            <p>{% autoescape off %}{{ post.content }}{% endautoescape %}</p>
+          </div>
+        {% endfor %}
+
+        <nav>
+          <ul class="pagination">
+            {% if posts.has_previous %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{ posts.previous_page_number }}">
+                  <span>&laquo;</span>
+                </a>
+              </li>
+            {% endif %}
+
+            <li class="page-item disabled"><a class="page-link" href="#">
+              صفحه {{ posts.number }} از {{ posts.paginator.num_pages }}
+            </a></li>
+
+            {% if posts.has_next %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{ posts.next_page_number }}">
+                  <span>&raquo;</span>
+                </a>
+              </li>
+            {% endif %}
+          </ul>
+        </nav>
+
+      {% else %}
+        <h4>مطلبی یافت نشد!</h4>
+      {% endif %}
+    </article>
+  </div>
+
+{% endblock %}
