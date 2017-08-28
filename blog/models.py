@@ -22,8 +22,8 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, verbose_name=_('Slug'), help_text=_('Used in the URL'))
     content = RichTextUploadingField(verbose_name=_('Content'))
     post_category = models.ForeignKey(PostCategory, on_delete=models.CASCADE, verbose_name=_('Category'))
-    pub_date = models.DateField(auto_now_add=True)
-    last_modified = models.DateField(auto_now=True)
+    pub_date = models.DateField(auto_now_add=True, verbose_name=_('Publish date'))
+    last_modified = models.DateField(auto_now=True, verbose_name=_('Modified date'))
     author = models.ForeignKey(User, null=True, blank=True, verbose_name=_('Author'))
     thumbnail = models.ImageField(
         upload_to='thumbnails',
