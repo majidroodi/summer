@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django_jalali.db import models as jmodels
 
 class LetterSubject(models.Model):
     title = models.CharField(max_length=200, verbose_name=_('Subject Title'))
@@ -19,7 +20,7 @@ class Letter(models.Model):
     title = models.CharField(max_length=200, verbose_name=_('Title'))
     letter_subject = models.ForeignKey(LetterSubject, on_delete=models.CASCADE, verbose_name=_('Subject'))
     message = models.TextField(verbose_name=_('Message'))
-    postage_date = models.DateField(auto_now_add=True, verbose_name=_('Postage Date'))
+    postage_date = jmodels.jDateField(auto_now_add=True, verbose_name=_('Postage Date'))
 
     def __str__(self):
         return self.title
