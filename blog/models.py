@@ -19,6 +19,7 @@ class PostCategory(models.Model):
         verbose_name_plural = _('Categories')
 
 class Post(models.Model):
+    objects = jmodels.jManager()
     name = models.CharField(max_length=200, verbose_name=_('Name'))
     slug = models.SlugField(max_length=200, verbose_name=_('Slug'), help_text=_('Used in the URL'))
     brief_content = models.TextField(verbose_name=_('Brief content'), null=True)

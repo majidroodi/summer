@@ -1,10 +1,12 @@
 {% extends "summer/layout.html" %}
 
+{% load jformat %}
+
 {% block content %}
   <article class="page-content">
     <div class="page-thumb"><img src="{{ post.media_url }}{{ post.thumbnail }}" /></div>
     <h2>{{ post.name }}</h2>
-    <span> در تاریخ: {{ post.pub_date }}</span>
+    <span> در تاریخ: {{ post.pub_date | jformat:"%d %m %Y" }}</span>
     <span>توسط: {{ post.author }}</span>
     <span>در دسته بندی: <a href="/blog/cat/{{ post.post_category.slug }}">{{ post.post_category.name }}</a></span>
     <div>{% autoescape off %}  {{ post.content }} {% endautoescape %}</div>
