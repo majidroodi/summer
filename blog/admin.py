@@ -4,9 +4,10 @@ from .models import Post, PostCategory
 # import django_jalali.admin as jadmin
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['name', 'post_category', 'pub_date', 'last_modified', 'author']
+    list_display = ['name', 'post_category', 'pub_date', 'last_modified', 'author', 'pub_status']
     list_filter = [
         # ('pub_date', JDateFieldListFilter), #TODO : Fix jalali date filter error
+        'pub_status',
         'author',
         'post_category'
     ]

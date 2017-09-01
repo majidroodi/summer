@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-11 18:40+0430\n"
+"POT-Creation-Date: 2017-09-02 00:33+0430\n"
 "PO-Revision-Date: 2017-08-11 18:41+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,42 +22,60 @@ msgstr ""
 msgid "Blog"
 msgstr "بلاگ"
 
-#: models.py:10 models.py:21
+#: models.py:11 models.py:23
 msgid "Name"
 msgstr "نام"
 
-#: models.py:11 models.py:22
+#: models.py:12 models.py:24
 msgid "Slug"
 msgstr "آدرس"
 
-#: models.py:11 models.py:22
+#: models.py:12 models.py:24
 msgid "Used in the URL"
 msgstr "برای استفاده در URL"
 
-#: models.py:17 models.py:24
+#: models.py:18 models.py:27
 msgid "Category"
 msgstr "دسته بندی"
 
-#: models.py:18
+#: models.py:19
 msgid "Categories"
 msgstr "دسته بندی ها"
 
-#: models.py:23
+#: models.py:25
+#, fuzzy
+#| msgid "Content"
+msgid "Brief content"
+msgstr "خلاصه مطلب"
+
+#: models.py:26
 msgid "Content"
 msgstr "محتوا"
 
-#: models.py:27
+#: models.py:28
+msgid "Publish date"
+msgstr "تاریخ انتشار"
+
+#: models.py:29
+msgid "Modified date"
+msgstr "آخرین ویرایش"
+
+#: models.py:30
+msgid "Publish status"
+msgstr "منتشر شده"
+
+#: models.py:31
 msgid "Author"
 msgstr "نویسنده"
 
-#: models.py:31
+#: models.py:34
 msgid "Thumbnail"
 msgstr "تصویر شاخص"
 
-#: models.py:38
+#: models.py:42
 msgid "Post"
 msgstr "پست"
 
-#: models.py:39
+#: models.py:43
 msgid "Posts"
 msgstr "پست ها"
