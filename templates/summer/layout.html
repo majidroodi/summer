@@ -27,7 +27,23 @@
           </li>
           <li class="nav-item">
               <a class="nav-link" href="{% url 'contact' %}">تماس</a>
-            </li>
+          </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout'%}?next={{request.path}}">خروج</a>
+          </li>
+          {% else %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+              حساب کاربری
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="{% url 'login'%}?next={{request.path}}">ورود</a>
+              <a class="dropdown-item" href="#">عضویت</a>
+              <a class="dropdown-item" href="{% url 'password_reset' %}">فراموشی رمز عبور</a>
+            </div>
+          </li>
+          {% endif %}
         </ul>
       </div>
     </nav>
@@ -45,7 +61,8 @@
       </footer>
   </div>
 
-	<script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
+  <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
+	<script src="{% static 'js/popper.min.js' %}"></script>
 	<script src="{% static 'js/bootstrap.min.js' %}"></script>
 </body>
 </html>

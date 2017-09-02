@@ -149,3 +149,10 @@ CKEDITOR_BROWSE_SHOW_DIRS = True
 CKEDITOR_ALLOW_NONIMAGE_FILES = True
 # CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
 # CKEDITOR_RESTRICT_BY_USER = True
+
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/'
+
+# For testting email in development
+# active sending email: https://docs.djangoproject.com/en/1.10/topics/email/
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

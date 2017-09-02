@@ -28,6 +28,11 @@ body {
     text-align: center;
 }
 
+/* bootstrap dropdown */
+.dropdown-menu {
+    text-align: right;
+}
+
 /* Footer */
 .main-footer {
     background-color: #f8f9fa;
@@ -100,4 +105,12 @@ ul.pagination {
     margin-left: -1;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+
+/* Registration pages */
+.form-group input,
+.form-group label {
+    display: block;
+    width: 100%;
 }
